@@ -28,6 +28,7 @@
 
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
+    {{#if featured}}
     <div class='post-holder'>
         
             {{#if @first}}
@@ -51,7 +52,8 @@
         </article>
         <div class='post-after'></div>
     </div>
-
+    
+    {{/if}}
     {{/foreach}}
 
     {{!! After all the posts, we have the previous/next pagination links }}
